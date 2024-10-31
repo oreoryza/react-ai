@@ -1,0 +1,47 @@
+.chat-message-cstm:nth-last-child(2) {
+  margin-bottom: 90px !important;
+}
+
+.rounded-user-cstm {
+  border-radius: 15px 15px 0px 15px;
+}
+
+.rounded-bot-cstm {
+  border-radius: 15px 15px 15px 0px;
+}
+
+.gradient {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.bg-blur {
+  background: rgba(255, 255, 255, 0.4) !important;
+}
+
+.bg-user-cstm {
+  background: rgba(31, 235, 41, 0.25) !important;
+}
+
+.bg-bot-cstm {
+  background: rgba(31, 72, 235, 0.25) !important;
+}
+
+.btn-cstm:hover {
+  background-color: #0062db !important;
+}
+
