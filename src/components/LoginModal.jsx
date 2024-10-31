@@ -10,12 +10,12 @@ function LoginModal({
   form,
 }) {
   return (
-    <div className="modal show d-block" tabIndex="-1">
+    <div className="modal show d-block fadeIn" tabIndex="-1">
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content bg-blur">
           <div className="modal-header d-flex justify-content-between">
             <h5 className="modal-title fw-bold">{isLogin ? "Login" : "Register"}</h5>
-            <h5 className="modal-title fw-bold">{isLogin ? <i class="bi bi-door-open"></i> : <i class="bi bi-door-open-fill"></i>}</h5>
+            <h5 className="modal-title fw-bold">{isLogin ? <i className="bi bi-door-open"></i> : <i className="bi bi-door-open-fill"></i>}</h5>
           </div>
           <div className="modal-body">
             {error && <div className="alert alert-danger">{error}</div>}

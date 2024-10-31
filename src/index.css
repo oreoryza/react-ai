@@ -1,5 +1,5 @@
 .chat-message-cstm:nth-last-child(2) {
-  margin-bottom: 90px !important;
+  margin-bottom: 100px !important;
 }
 
 .rounded-user-cstm {
@@ -8,6 +8,32 @@
 
 .rounded-bot-cstm {
   border-radius: 15px 15px 15px 0px;
+}
+
+.gradientNav {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100%;
+}
+
+.slideIn {
+  animation: slideIn 4s;
+}
+
+@keyframes slideIn {
+  0% {
+    height: 100vh;
+    opacity: 0;
+  }
+  75% {
+    height: 100vh;
+    opacity: 0;
+  }
+  100% {
+    height: 8vh;
+    opacity: 1;
+  }
 }
 
 .gradient {
@@ -30,18 +56,99 @@
 }
 
 .bg-blur {
-  background: rgba(255, 255, 255, 0.4) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
 }
 
 .bg-user-cstm {
-  background: rgba(31, 235, 41, 0.25) !important;
+  background: rgba(31, 235, 164, 0.25) !important;
 }
 
 .bg-bot-cstm {
-  background: rgba(31, 72, 235, 0.25) !important;
+  background: rgba(79, 18, 202, 0.25) !important;
 }
 
 .btn-cstm:hover {
-  background-color: #0062db !important;
+  background-color: rgba(155, 155, 155, 0.4) !important;
 }
 
+.fadeIn {
+  animation: fadeIn 2s !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slideUp {
+  animation: slideUp 4s;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  75% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  visibility: hidden;
+  animation: logo 3s;
+}
+
+@keyframes logo {
+  0% {
+    visibility: visible;
+  }
+  75% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  
+}
+
+.load-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 4;
+  --_g: no-repeat radial-gradient(circle closest-side,#c14242 90%,#bc4b4b00);
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 100%;
+  animation: l7 1s infinite linear;
+}
+@keyframes l7 {
+    33%{background-size:calc(100%/3) 0%  ,calc(100%/3) 100%,calc(100%/3) 100%}
+    50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%}
+    66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%  }
+}

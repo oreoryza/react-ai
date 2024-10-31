@@ -16,7 +16,7 @@ function ChatMessage({ message, query }) {
 
       {/* BOT MESSAGE */}
       <div className="d-flex justify-content-start my-3">
-        <div className="p-3 d-flex align-items-start border shadow-sm rounded-bot-cstm bg-primary-subtle text-start me-5">
+        <div className="p-3 d-flex align-items-start border shadow-sm rounded-bot-cstm bg-bot-cstm bg-bot-cstm text-start me-5">
           <strong>
             <i className="bi bi-robot fs-5 me-3"></i>
           </strong>
