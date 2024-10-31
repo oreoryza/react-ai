@@ -10,6 +10,7 @@ class ChatContainer extends Component {
         loading: false,
         error: null,
         query: '',
+        mode: true,
     }
 
     handleQuery = async (e) => {
@@ -47,10 +48,14 @@ class ChatContainer extends Component {
         }
     }
 
+    whichMode = () => {
+        this.setState({mode: !this.state.mode});
+    }
+
     render() {
         return (
             <div>
-                <Navbar setToken={this.props.setToken} logout={this.isLogout}/>
+                <Navbar setToken={this.props.setToken} logout={this.isLogout} mode={this.state.mode} whichMode={this.whichMode} />
                 {
                     this.state.messages.map((message, index) => {
                         return <ChatMessage key={index} message={message.data.data} query={message.query}/>
