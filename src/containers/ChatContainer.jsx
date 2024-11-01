@@ -37,12 +37,18 @@ class ChatContainer extends Component {
         this.setState({query: e.target.value});
     }
 
-    isLogout = () => {
+    isLogout = async (e) => {
+        e.preventDefault();
         this.setState({query: '', messages: []});
-        const token = localStorage.getItem("token");
         if (this.props.logout) {
-            // console.log(token);
-            logout(token)
+            // console.log(this.props.token);
+            logout(this.props.token)
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((err) => {
+                this.setState({error: err.message});
+            })
             this.props.setToken(null);
             localStorage.removeItem('token');
         }

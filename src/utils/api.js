@@ -33,7 +33,7 @@ export const queryAI = async (data, token) => {
 }
 
 export const logout = async (token) => {
-    const res = await axios.post(`${API_URL}/logout`, {
+    const res = await axios.post(`${API_URL}/logout`, {}, {
         headers: {
             'Content-Type': 'application/json',
             'x-api-key': 'RJS1-202414',
@@ -42,5 +42,3 @@ export const logout = async (token) => {
     });
     return res.data;
 }
-
-// buat logout, bersihkan data local storage
